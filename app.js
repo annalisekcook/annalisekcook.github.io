@@ -32,8 +32,8 @@
     return '<nav class="sidebar">' +
       '<div class="sb-top"><a class="brand" href="/">ANNALISE COOK</a>' +
       '<button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>' +
-      '<div class="sb-body"><div class="work"><span class="work-label">WORK</span>' + links + '</div>' +
-      '<a class="meet' + (active === "about" ? " is-active" : "") + '" href="/about">MEET &amp; CONNECT &nbsp;→</a>' +
+      '<div class="sb-body"><a class="meet' + (active === "about" ? " is-active" : "") + '" href="/about">MEET &amp; CONNECT &nbsp;→</a>' +
+      '<div class="work"><span class="work-label">WORK</span>' + links + '</div>' +
       socials("sb-social") + '</div></nav>';
   }
   function shell(active, inner) {
