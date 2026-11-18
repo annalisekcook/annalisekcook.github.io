@@ -16,6 +16,8 @@
 
   function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
   function img(id, w) { return IMG + id + (w ? "?scale-down-to=" + w : ""); }
+  function srcset(id, ws) { return ws.map(function (w) { return img(id, w) + " " + w + "w"; }).join(", "); }
+  var CARD_SIZES = "(max-width:809.98px) 100vw, (max-width:1199.98px) 45vw, 320px";
   function socials(cls) {
     return '<div class="' + cls + '">' + SOCIAL.map(function (s) {
       return '<a href="' + s[1] + '" aria-label="' + s[0] + '"' + (s[0] === "Email" ? "" : ' target="_blank" rel="noopener"') + '>' + s[2] + '</a>';
@@ -50,8 +52,8 @@
 
   function card(p) {
     return '<a class="card" href="/work/' + p.slug + '"><div class="card-img">' +
-      '<img src="' + img(p.cover, 1024) + '" alt="' + esc(p.title) + '" loading="lazy">' +
-      (p.hover ? '<img class="hover" src="' + img(p.hover, 1024) + '" alt="" loading="lazy">' : "") +
+      '<img src="' + img(p.cover, 1024) + '" srcset="' + srcset(p.cover, [512, 1024]) + '" sizes="' + CARD_SIZES + '" alt="' + esc(p.title) + '" loading="lazy" decoding="async">' +
+      (p.hover ? '<img class="hover" src="' + img(p.hover, 1024) + '" srcset="' + srcset(p.hover, [512, 1024]) + '" sizes="' + CARD_SIZES + '" alt="" loading="lazy" decoding="async">' : "") +
       '</div><span class="card-title">' + esc(p.title) + '</span><span class="card-year">' + esc(p.year) + '</span></a>';
   }
 
@@ -73,8 +75,9 @@
   }
   function section(s) {
     if (Array.isArray(s)) {
+      var gsizes = "(max-width:809.98px) 100vw, " + Math.round(1020 / s.length) + "px";
       return '<div class="jrow">' + s.map(function (id) {
-        return '<figure><img src="' + img(id, 2048) + '" data-full="' + img(id) + '" alt="" loading="lazy"></figure>';
+        return '<figure><img src="' + img(id, 2048) + '" srcset="' + srcset(id, [512, 1024, 2048]) + '" sizes="' + gsizes + '" data-full="' + img(id) + '" alt="" loading="lazy" decoding="async"></figure>';
       }).join("") + '</div>';
     }
     var out = "";
@@ -85,7 +88,7 @@
         '<div class="body">' + s.b + '</div></div>';
     }
     if (s.si) {
-      out += '<div class="side"><div class="side-img"><img src="' + img(s.si, 1024) + '" alt="" loading="lazy"></div><div class="side-text">' + s.st + button(s) + '</div></div>';
+      out += '<div class="side"><div class="side-img"><img src="' + img(s.si, 512) + '" alt="" loading="lazy"></div><div class="side-text">' + s.st + button(s) + '</div></div>';
     } else {
       out += button(s);
     }
@@ -109,7 +112,7 @@
         : '<img class="tool" src="' + img(t, 512) + '" alt="" loading="lazy">';
     }).join("");
     var recs = A.recs.map(function (r) {
-      return '<div class="rec"><div class="rec-head"><img src="' + img(r.img) + '" alt=""><div><b>' + esc(r.name) + '</b><span>' + esc(r.role) + '</span><small>' + esc(r.meta) + '</small></div></div>' +
+      return '<div class="rec"><div class="rec-head"><img src="' + img(r.img, 512) + '" alt="" loading="lazy"><div><b>' + esc(r.name) + '</b><span>' + esc(r.role) + '</span><small>' + esc(r.meta) + '</small></div></div>' +
         '<p>' + esc(r.text) + '</p><a class="more" href="https://www.linkedin.com/in/annalisec/" target="_blank" rel="noopener">READ MORE &nbsp;→</a></div>';
     }).join("");
     return shell("about", '<div class="about">' +
