@@ -172,6 +172,23 @@ a:hover{color:#3b4c78}
 
 /* fix-v11 */
 @media (max-width:860px){header > .bg-hero{opacity:.5 !important}}
+
+/* fix-v16 */
+#work > div{max-width:1040px !important}
+.card{flex-basis:calc((100% - 48px) / 2) !important}
+.ccap{flex-direction:column;align-items:flex-start;gap:8px}
+.csub{font-size:12px;font-weight:500;letter-spacing:.02em;color:#6b7588}
+.phstrip{max-width:1040px;margin:72px auto 0;display:flex;align-items:center;gap:32px;padding:22px;border:1px solid #dfe5eb;border-radius:14px;background:#ffffff;color:#1f2a48;transition:box-shadow .4s,transform .4s}
+.phstrip:hover{color:#1f2a48;transform:translateY(-3px);box-shadow:0 30px 60px -36px rgba(31,42,72,.45)}
+.phstrip .pth{flex:0 0 200px;aspect-ratio:4 / 3;border-radius:8px;overflow:hidden}
+.phstrip .pth img{width:100%;height:100%;object-fit:cover;display:block}
+.phstrip .ptx{flex:1 1 auto;min-width:0}
+.phstrip .pey{margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:.3em;color:#3b4c78}
+.phstrip .pti{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.phstrip .pde{margin:8px 0 0;font-size:14px;line-height:1.65;color:#5a6478}
+.phstrip .pgo{flex:0 0 auto;display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 20px;border:1px solid #1f2a48;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:background .3s,color .3s}
+.phstrip:hover .pgo{background:#1f2a48;color:#ffffff}
+@media (max-width:760px){.phstrip{flex-direction:column;align-items:stretch;gap:18px;margin-top:56px}.phstrip .pth{flex-basis:auto}.phstrip .pgo{justify-content:center}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Annalise Cook","jobTitle":"Graphic & Web Designer","url":"https://annalisecook.com/","email":"mailto:annalisekc@gmail.com","sameAs":["https://www.linkedin.com/in/annalisec","https://www.instagram.com/annalisecdesign/"],"alumniOf":"High Point University"}</script>
 </head>
@@ -208,7 +225,7 @@ a:hover{color:#3b4c78}
       <span class="mask l2"><span>COOK</span></span>
     </h1>
     <div class="fade fade2" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-top: 56px; padding-top: 32px; border-top: 1px solid #dfe5eb">
-      <p style="margin: 0; font-size: clamp(15px, 1.25vw, 18px); line-height: 1.4; font-weight: 400; color: #3b4c78">Creative Strategy, Branding &amp; Web Design</p>
+      <p style="margin: 0; font-size: clamp(15px, 1.25vw, 18px); line-height: 1.4; font-weight: 400; color: #3b4c78">Brand identity · Web &amp; UX/UI design · Digital marketing</p>
       <div style="display: flex; gap: 14px; flex-wrap: wrap">
         <a class="btn btn-navy" href="#work" style="min-height: 40px; padding: 0 20px; font-size: 11px; gap: 10px">View my work
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
@@ -226,25 +243,26 @@ a:hover{color:#3b4c78}
   <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 64px 48px">
     <a class="card reveal" href="/brand-identity/">
       <span class="cimg"><img src="/assets/c2fcc8e6e03190429ce8b17bb383ae0e.jpg" alt="Paper Treasures business cards"><span class="cov"><span class="covt">Brand Identity</span><span class="covl">View work <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></span>
-      <span class="ccap"><span class="ctitle">Brand Identity</span></span>
+      <span class="ccap"><span class="ctitle">Brand Identity</span><span class="csub">Logos, brand systems &amp; guidelines</span></span>
     </a>
     <a class="card reveal" href="/website-design/">
       <span class="cimg"><img src="/assets/887c5ceef0d43ec50848b572fdc521a7.jpg" alt="Bright Lingo app screens"><span class="cov"><span class="covt">Digital Experiences</span><span class="covl">View work <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></span>
-      <span class="ccap"><span class="ctitle">Digital Experiences</span></span>
+      <span class="ccap"><span class="ctitle">Digital Experiences</span><span class="csub">Websites, apps &amp; UX/UI</span></span>
     </a>
     <a class="card reveal" href="/visual-communication/">
       <span class="cimg"><img src="/assets/efc50cf811e01e0542fa9f1e9a6d6ffb.jpg" alt="Type posters displayed on a gallery wall"><span class="cov"><span class="covt">Visual Communication</span><span class="covl">View work <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></span>
-      <span class="ccap"><span class="ctitle">Visual Communication</span></span>
+      <span class="ccap"><span class="ctitle">Visual Communication</span><span class="csub">Print, editorial &amp; posters</span></span>
     </a>
     <a class="card reveal" href="/social-media-marketing/">
       <span class="cimg"><img src="/assets/f914a37c7ea3caaf920b3c2e1eb2c52f.jpg" alt="Zeta Tau Alpha Instagram content"><span class="cov"><span class="covt">Social Media &amp; Marketing</span><span class="covl">View work <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></span>
-      <span class="ccap"><span class="ctitle">Social Media &amp; Marketing</span></span>
-    </a>
-    <a class="card reveal" href="/work/photography/">
-      <span class="cimg"><img src="/assets/231da32fe5002db30060de61b5a4c3c8.jpg" alt="Brand collaboration photoshoot"><span class="cov"><span class="covt">Photography</span><span class="covl">View work <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span></span>
-      <span class="ccap"><span class="ctitle">Photography</span></span>
+      <span class="ccap"><span class="ctitle">Social Media &amp; Marketing</span><span class="csub">Social content, campaigns &amp; ads</span></span>
     </a>
   </div>
+  <a class="phstrip reveal" href="/work/photography/">
+    <span class="pth"><img src="/assets/231da32fe5002db30060de61b5a4c3c8.jpg" alt="Brand collaboration photoshoot"></span>
+    <span class="ptx"><p class="pey">ALSO · PHOTOGRAPHY</p><p class="pti">Behind the camera.</p><p class="pde">Lifestyle, portrait and brand collaboration shoots, with work featured by Loving Tan, Edikted and EVRY Jewels.</p></span>
+    <span class="pgo">View photography <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+  </a>
 </section>
 
 <!-- =============== ABOUT (b&w photo band + info box) =============== -->
