@@ -173,6 +173,11 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
 .lsite:hover small{color:#bfcfd9}
 @media (max-width:860px){.hwi{width:46px;height:46px;box-shadow:none}.hwi svg{width:20px;height:20px}.hw h3{margin-top:3px}}
 @media (max-width:600px){section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(4,64px) !important;gap:26px 18px !important}.tool{width:64px}.tool .ti{width:54px;height:54px;border-radius:13px}.lsite{width:100%;justify-content:space-between}}
+
+/* fix-v6 */
+.lsband .lsite{border-color:rgba(191,207,217,.5);color:#ffffff;min-height:48px;padding:0 24px}
+.lsband .lsite:hover{background:#bfcfd9;color:#1f2a48;border-color:#bfcfd9}
+#recs .rec{background:#ffffff}
 </style>
 </head>
 <body>
@@ -239,7 +244,7 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
 </section>
 
 <!-- =============== HOW I WORK =============== -->
-<section aria-label="How I work" style="background: #ffffff; padding: 110px 5vw 30px">
+<section aria-label="How I work" style="background: #ffffff; padding: 110px 5vw 110px">
   <div style="max-width: 1240px; margin: 0 auto">
     <div class="reveal" style="text-align: center; max-width: 640px; margin: 0 auto 56px">
       <p style="margin: 0 0 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">HOW I WORK</p>
@@ -272,8 +277,8 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
 </section>
 
 <!-- Tools -->
-<section aria-label="Tools I work with" style="background: #ffffff; padding: 90px 5vw 40px">
-  <p class="reveal" style="margin: 0 0 44px; text-align: center; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">TOOLS I WORK WITH</p>
+<section aria-label="Tools I work with" style="background: #f4f6f8; padding: 100px 5vw 110px">
+  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 48px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">TOOLS I WORK WITH</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #1f2a48">The toolkit behind the work.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #5a6478">From the Adobe suite and Figma to web builders and AI assistants.</p></div>
   <ul class="reveal" style="list-style: none; margin: 0 auto; padding: 0; max-width: 1240px; display: grid; grid-template-columns: repeat(auto-fit, 68px); justify-content: center; gap: 28px 14px">
       <li class="tool"><span class="ti"><img src="/assets/9a6990aa06d35eaa27f825e7967df53f.png" alt=""></span><span class="tl">Illustrator</span></li>
       <li class="tool"><span class="ti"><img src="/assets/450cf27cf2841100d6d481762ec175b1.png" alt=""></span><span class="tl">Photoshop</span></li>
@@ -295,8 +300,8 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
 </section>
 
 <!-- Live sites -->
-<section aria-label="Live websites" style="background: #ffffff; padding: 30px 5vw 20px">
-  <p class="reveal" style="margin: 0 0 22px; text-align: center; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">LIVE WEBSITES I’VE BUILT</p>
+<section aria-label="Live websites" class="lsband" style="background: #1f2a48; padding: 100px 5vw 110px">
+  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 40px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #bfcfd9">LIVE WEBSITES</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #ffffff">See my sites in action.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #c9d4de">Client websites I designed and built, live on the web today.</p></div>
   <ul class="lsites reveal">
     <li><a class="lsite" href="https://www.goodlooksautospa.com/" target="_blank" rel="noopener">GoodLooks Auto Spa <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
     <li><a class="lsite" href="https://www.conventionalbuildersandroofing.com/" target="_blank" rel="noopener">Conventional Builders &amp; Roofing <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
@@ -305,8 +310,8 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
 </section>
 
 <!-- Brands & clients -->
-<section aria-label="Brands and clients" style="background: #ffffff; padding: 70px 0 100px">
-  <p style="margin: 0 0 32px; padding: 0 5vw; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78; text-align: center">BRANDS &amp; CLIENTS</p>
+<section aria-label="Brands and clients" style="background: #ffffff; padding: 100px 0 110px">
+  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 48px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">BRANDS &amp; CLIENTS</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #1f2a48">Brands I’ve worked with.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #5a6478">Through client work, social campaigns and brand photoshoots.</p></div>
   <div style="overflow: hidden; border-top: 1px solid #dfe5eb; border-bottom: 1px solid #dfe5eb; padding: 34px 0">
     <div class="track">
       <div style="display: flex; gap: 80px; padding-right: 80px; align-items: center"><img class="logo" src="/assets/dee0d38f980c2c0b3fe06ef3593fc9fd.png" alt="GoodLooks Auto Spa"><img class="logo" src="/assets/60a5023f16284f8bc1a5254923b82c46.png" alt="Edikted"><img class="logo" src="/assets/729fd4275802950804e5812d17b70f3f.png" alt="Poppi"><img class="logo" src="/assets/3de1adaae21ab3623c1ca0f3a6f0345c.png" alt="Hops on West"><img class="logo" src="/assets/bd8de78a7cbc82e7ae082404af149dbd.png" alt="Bloom"><img class="logo" src="/assets/02ab9eed85fe3c8ee8a0138d6abf38ac.png" alt="Princess Polly"><img class="logo" src="/assets/83f583cf6397ac8576eaea02fca0d3a7.png" alt="Hidden Valley"><img class="logo" src="/assets/22e993115dc12b395824fe02c42977e0.png" alt="Loving Tan"><img class="logo" src="/assets/db025d551ddfbeabbec7923e519d8731.png" alt="CB Roofing"><img class="logo" src="/assets/e673f7a3c41a90577752317e8c366cd1.png" alt="B&amp;M Demolitions"><img class="logo" src="/assets/1a6a8db66baf80ee95c7a66c477dbde1.png" alt="Delta Wealth"><img class="logo" src="/assets/c679d4e52845f7202343981bec118c9b.png" alt="Gift of Adoption Fund"><img class="logo" src="/assets/a49ed8cec51cbd5bcd7980d7ff985bc0.png" alt="Hello Molly"><img class="logo" src="/assets/4475c414904dae08f48fc78b5a155498.png" alt="Alani Nu"><img class="logo" src="/assets/0337df0fb22d63e9e83b9ccdab09030d.png" alt="Prime"><img class="logo" src="/assets/c2025951f05a36de747c0890b269cfbf.png" alt="Brewbury"></div>
@@ -316,7 +321,7 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
 </section>
 
 <!-- Recommendations -->
-<section id="recs" style="background: #ffffff; padding: 40px 5vw 110px">
+<section id="recs" style="background: #f4f6f8; padding: 100px 5vw 110px">
   <div style="max-width: 1320px; margin: 0 auto">
     <p class="reveal" style="margin: 0 0 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.3em; color: #1f2a48">RECOMMENDATIONS</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px">
