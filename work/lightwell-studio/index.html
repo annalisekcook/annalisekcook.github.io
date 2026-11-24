@@ -129,6 +129,24 @@ a:hover{color:#3b4c78}
 @media (max-width:760px){.fembed{aspect-ratio:4 / 3.4}.fembed.app{aspect-ratio:9 / 17}}
 .btn-line-w{border:1px solid rgba(255,255,255,.7);color:#ffffff}
 .btn-line-w:hover{background:#ffffff;color:#1f2a48}
+
+/* fix-v9 contact popup */
+.cmodal{position:fixed;inset:0;z-index:900;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.cmodal:target{opacity:1;visibility:visible;transition:opacity .3s,visibility 0s}
+.cm-bg{position:absolute;inset:0;background:rgba(17,23,40,.62);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);cursor:default}
+.cm-card{position:relative;width:100%;max-width:460px;background:#ffffff;border-radius:18px;padding:44px 40px 34px;box-shadow:0 40px 90px -30px rgba(17,23,40,.6);transform:translateY(14px) scale(.98);transition:transform .35s cubic-bezier(.2,.7,.2,1);font-family:Montserrat,system-ui,sans-serif;text-align:left}
+.cmodal:target .cm-card{transform:none}
+.cm-x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#1f2a48;transition:background .3s}
+.cm-x:hover{background:#eef3f6}
+.cm-eye{margin:0 0 12px;font-size:11px;font-weight:600;letter-spacing:.32em;color:#3b4c78}
+.cm-h{margin:0;font-size:28px;line-height:1.15;font-weight:700;letter-spacing:-.01em;color:#1f2a48}
+.cm-p{margin:12px 0 26px;font-size:14px;line-height:1.7;color:#5a6478}
+.cm-mail{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:0 22px;border-radius:999px;background:#1f2a48;color:#ffffff;font-size:13px;font-weight:600;letter-spacing:.04em;transition:background .3s,transform .3s}
+.cm-mail:hover{background:#3b4c78;color:#ffffff;transform:translateY(-2px)}
+.cm-soc{display:flex;gap:10px;margin-top:10px}
+.cm-soc a{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;border:1px solid #bfcfd9;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#1f2a48;transition:background .3s,color .3s,border-color .3s}
+.cm-soc a:hover{background:#1f2a48;color:#ffffff;border-color:#1f2a48}
+@media (max-width:480px){.cm-card{padding:40px 24px 26px}.cm-h{font-size:24px}.cm-mail{font-size:12px;padding:0 18px}}
 </style>
 </head>
 <body>
@@ -141,7 +159,7 @@ a:hover{color:#3b4c78}
   <div style="display: flex; align-items: center; gap: 36px; flex-wrap: wrap">
     <a class="nl hide-sm" href="/#work">Work</a>
     <a class="nl hide-sm" href="/about/">About</a>
-    <a class="nl hide-sm" href="#contact">Contact</a>
+    <a class="nl hide-sm" href="#hello">Contact</a>
     <span style="display: flex; gap: 16px; align-items: center">
         <a class="soc" href="https://www.linkedin.com/in/annalisec" aria-label="LinkedIn"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5v6M8 7.7v.1M11.5 16.5v-6M11.5 13.3c0-1.7 1-2.8 2.5-2.8s2.5 1.1 2.5 2.8v3.2"></path></svg></a>
         <a class="soc" href="mailto:annalisekc@gmail.com" aria-label="Email"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="3"></rect><path d="M3.8 6.5l8.2 6.3 8.2-6.3"></path></svg></a>
@@ -246,6 +264,17 @@ a:hover{color:#3b4c78}
   </div>
 </footer>
 
+</div>
+<div id="hello" class="cmodal" role="dialog" aria-modal="true" aria-labelledby="hello-title">
+  <a class="cm-bg" href="#_" aria-label="Close contact"></a>
+  <div class="cm-card">
+    <a class="cm-x" href="#_" aria-label="Close contact"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+    <p class="cm-eye">CONTACT</p>
+    <h2 class="cm-h" id="hello-title">Let’s work together.</h2>
+    <p class="cm-p">Have a role, a project or a question? I’d love to hear from you. Email is the best way to reach me.</p>
+    <a class="cm-mail" href="mailto:annalisekc@gmail.com"><span>annalisekc@gmail.com</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="3"></rect><path d="M3.8 6.5l8.2 6.3 8.2-6.3"></path></svg></a>
+    <div class="cm-soc"><a href="https://www.linkedin.com/in/annalisec" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5v6M8 7.7v.1M11.5 16.5v-6M11.5 13.3c0-1.7 1-2.8 2.5-2.8s2.5 1.1 2.5 2.8v3.2"></path></svg> LinkedIn</a><a href="https://www.instagram.com/annalisecdesign/" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r=".5" fill="currentColor"></circle></svg> Instagram</a></div>
+  </div>
 </div>
 </body>
 </html>
