@@ -156,15 +156,45 @@ a:hover{color:#3b4c78}
 .fembed{aspect-ratio:auto !important;height:650px;max-width:1040px;border:1px solid rgba(255,255,255,.12);background:#ffffff}
 .fembed.app{height:760px;max-width:440px}
 @media (max-width:760px){.fembed{height:480px}.fembed.app{height:640px}}
+
+/* fix-v21 menu */
+.navt{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.navl{display:flex;align-items:center;gap:18px}
+.hamb{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:0 9px;border-radius:50%;cursor:pointer;transition:background .3s}
+.hamb:hover{background:#eef3f6}
+.hamb span{display:block;height:1.6px;border-radius:2px;background:#1f2a48}
+.mdraw{position:fixed;inset:0;z-index:800;visibility:hidden;transition:visibility 0s .4s}
+.mdbg{position:absolute;inset:0;background:rgba(17,23,40,.45);opacity:0;transition:opacity .4s;cursor:default}
+.mdp{position:absolute;top:0;left:0;bottom:0;width:min(380px,100vw);background:#ffffff;overflow-y:auto;padding:26px 36px 40px;transform:translateX(-102%);transition:transform .45s cubic-bezier(.2,.7,.2,1);box-shadow:30px 0 80px -40px rgba(17,23,40,.5);font-family:Montserrat,system-ui,sans-serif}
+.navt:checked ~ .mdraw{visibility:visible;transition:visibility 0s}
+.navt:checked ~ .mdraw .mdbg{opacity:1}
+.navt:checked ~ .mdraw .mdp{transform:none}
+.mdtop{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}
+.mdhome{font-size:13px;font-weight:700;letter-spacing:.1em;color:#1f2a48}
+.mdx{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#1f2a48;cursor:pointer;transition:background .3s}
+.mdx:hover{background:#eef3f6}
+.mdgrp{margin:0 0 26px}
+.mdh{display:block;margin:0 0 8px;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1f2a48}
+.mdh.solo{margin:0 0 22px}
+.mdi{display:block;padding:5px 0;font-size:14px;color:#8a94a6;transition:color .25s,padding .25s}
+.mdh:hover,.mdi:hover,.mdon{color:#1f2a48 !important}
+.mdi:hover{padding-left:4px}
+.mdi.mdon{font-weight:600}
+.mdline{height:1px;background:#dfe5eb;margin:8px 0 26px}
+.mdsoc{display:flex;gap:18px;margin-top:30px;color:#1f2a48}
+.mdsoc a{color:#1f2a48;display:inline-flex}
+.mdsoc a:hover{color:#3b4c78}
+@media (max-width:760px){.topbar .soc{display:none !important}.mdp{width:100vw;padding:22px 26px 40px}}
 </style>
 </head>
 <body>
 <div style="width: 100%; font-family: Montserrat, system-ui, sans-serif; color: #444444; background: #ffffff; overflow-x: clip">
+<input type="checkbox" id="navt" class="navt" aria-hidden="true" tabindex="-1">
 <nav class="nav topbar" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 22px 5vw 26px">
-  <a href="/" style="display: flex; align-items: center; gap: 12px">
+  <span class="navl"><label for="navt" class="hamb" aria-label="Open menu"><span></span><span></span><span></span></label><a href="/" style="display: flex; align-items: center; gap: 12px">
     <img src="/assets/8b3b61f41bd16ed9a9730b78bb8e8b1f.png" alt="Annalise Cook monogram" style="width: 40px; height: 40px; object-fit: contain">
     <span style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; color: #1f2a48">ANNALISE COOK</span>
-  </a>
+  </a></span>
   <div style="display: flex; align-items: center; gap: 36px; flex-wrap: wrap">
     <a class="nl hide-sm" href="/#work">Work</a>
     <a class="nl hide-sm" href="/about/">About</a>
@@ -176,6 +206,23 @@ a:hover{color:#3b4c78}
       </span>
   </div>
 </nav>
+<div class="mdraw">
+  <label for="navt" class="mdbg" aria-hidden="true"></label>
+  <nav class="mdp" aria-label="Site menu">
+    <div class="mdtop"><a class="mdhome" href="/">ANNALISE COOK</a><label for="navt" class="mdx" aria-label="Close menu"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></label></div>
+    <div class="mdgrp"><a class="mdh" href="/brand-identity/">Brand Identity</a><a class="mdi mdon" href="/work/paper-treasures/">Paper Treasures</a><a class="mdi" href="/work/future-in-focus/">Future in Focus</a><a class="mdi" href="/work/lightwell-studio/">Lightwell Studio</a><a class="mdi" href="/work/grounded-design/">Grounded Design</a><a class="mdi" href="/work/arrive-alive/">Arrive Alive</a><a class="mdi" href="/work/hidden-valley/">Hidden Valley</a></div>
+    <div class="mdgrp"><a class="mdh" href="/website-design/">Digital Experiences</a><a class="mdi" href="/work/goodlooks-auto-spa/">GoodLooks Auto Spa</a><a class="mdi" href="/work/bright-lingo/">Bright Lingo</a></div>
+    <div class="mdgrp"><a class="mdh" href="/visual-communication/">Visual Communication</a><a class="mdi" href="/work/brewbury/">Brewbury</a><a class="mdi" href="/work/type-posters/">Type Posters</a><a class="mdi" href="/work/apogee-magazine/">Apogee Magazine</a></div>
+    <div class="mdgrp"><a class="mdh" href="/social-media-marketing/">Social Media &amp; Marketing</a><a class="mdi" href="/work/porsches-pilates/">Porsches &amp; Pilates</a><a class="mdi" href="/work/zeta-tau-alpha/">Zeta Tau Alpha</a><a class="mdi" href="/work/instagram-graphics-carousels/">Graphics &amp; Ads</a></div>
+    <div class="mdline"></div>
+    <a class="mdh solo" href="/work/photography/">Photography</a>
+    <a class="mdh solo" href="/about/">About</a>
+    <a class="mdh solo" href="#hello">Contact</a>
+    <div class="mdsoc"><a href="https://www.linkedin.com/in/annalisec" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10.5v6M8 7.7v.1M11.5 16.5v-6M11.5 13.3c0-1.7 1-2.8 2.5-2.8s2.5 1.1 2.5 2.8v3.2"></path></svg></a><a href="mailto:annalisekc@gmail.com" aria-label="Email"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="3"></rect><path d="M3.8 6.5l8.2 6.3 8.2-6.3"></path></svg></a><a href="https://www.instagram.com/annalisecdesign/" aria-label="Instagram"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r=".5" fill="currentColor"></circle></svg></a></div>
+  </nav>
+</div>
+<script>(function(){var t=document.getElementById('navt');if(!t)return;document.querySelectorAll('.mdp a').forEach(function(a){a.addEventListener('click',function(){t.checked=false})});document.addEventListener('keydown',function(e){if(e.key==='Escape')t.checked=false})})();</script>
+
 
 <!-- NAV -->
 
