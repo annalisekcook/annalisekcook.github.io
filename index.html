@@ -235,6 +235,22 @@ a:hover{color:#3b4c78}
 
 /* fix-v23 */
 @media (max-width:760px){.mdp{display:flex;flex-direction:column}.mdp > *{order:2}.mdp > .mdtop{order:0}.mdp > .mdsoc{order:1;margin:-18px 0 30px}}
+
+/* fix-v24 mobile hero */
+.mbr{display:none}
+@media (max-width:760px){
+  header > .bg-hero{top:0 !important;bottom:auto !important;left:0 !important;right:0 !important;margin:0 auto;width:100% !important;height:auto !important;aspect-ratio:1084 / 1451;opacity:.62 !important;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 14%,#000 52%,transparent 90%),linear-gradient(90deg,transparent 0%,#000 18%,#000 82%,transparent 100%) !important;
+    mask-image:linear-gradient(180deg,transparent 0%,#000 14%,#000 52%,transparent 90%),linear-gradient(90deg,transparent 0%,#000 18%,#000 82%,transparent 100%) !important;
+    -webkit-mask-composite:source-in !important;mask-composite:intersect !important}
+  header > div[style*="padding: 7vh 5vw 5vh"]{padding:calc(58vw + 40px) 6vw 44px !important}
+  header .heroA{display:none}
+  header .fade.fade2{margin-top:26px !important;padding-top:22px !important;gap:22px !important}
+  header .fade.fade2 > p{font-size:15px !important;line-height:1.55 !important}
+  .tsep{display:none}.mbr{display:inline}
+  header .fade.fade2 > div{width:100%;gap:12px !important}
+  header .fade.fade2 > div .btn{flex:1 1 0;justify-content:center;min-height:48px !important;padding:0 12px !important;white-space:nowrap;letter-spacing:.14em;gap:8px !important}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Annalise Cook","jobTitle":"Graphic & Web Designer","url":"https://annalisecook.com/","email":"mailto:annalisekc@gmail.com","sameAs":["https://www.linkedin.com/in/annalisec","https://www.instagram.com/annalisecdesign/"],"alumniOf":"High Point University"}</script>
 </head>
@@ -291,7 +307,7 @@ a:hover{color:#3b4c78}
       <span class="mask l2"><span>COOK</span></span>
     </h1>
     <div class="fade fade2" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-top: 56px; padding-top: 32px; border-top: 1px solid #dfe5eb">
-      <p style="margin: 0; font-size: clamp(15px, 1.25vw, 18px); line-height: 1.4; font-weight: 400; color: #3b4c78">Brand identity · Web &amp; UX/UI design · Digital marketing</p>
+      <p style="margin: 0; font-size: clamp(15px, 1.25vw, 18px); line-height: 1.4; font-weight: 400; color: #3b4c78">Brand identity · Web &amp; UX/UI design<span class="tsep"> · </span><br class="mbr">Digital marketing</p>
       <div style="display: flex; gap: 14px; flex-wrap: wrap">
         <a class="btn btn-navy" href="#work" style="min-height: 40px; padding: 0 20px; font-size: 11px; gap: 10px">View my work
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
