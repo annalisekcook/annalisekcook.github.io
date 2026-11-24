@@ -178,6 +178,18 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
 .lsband .lsite{border-color:rgba(191,207,217,.5);color:#ffffff;min-height:48px;padding:0 24px}
 .lsband .lsite:hover{background:#bfcfd9;color:#1f2a48;border-color:#bfcfd9}
 #recs .rec{background:#ffffff}
+
+/* fix-v7 */
+.hwsec h2{font-size:clamp(22px,1.9vw,28px) !important}
+.hwsec > div > .reveal:first-child{margin-bottom:40px !important;max-width:560px !important}
+.hwsec > div > .reveal:first-child p:last-child{font-size:14px !important}
+.hwsec .hwl{max-width:1040px;margin:0 auto;gap:16px}
+.hwsec .hwl::before{top:24px;background:linear-gradient(90deg,transparent,#c9d6e0 12%,#c9d6e0 88%,transparent)}
+.hwsec .hwi{width:48px;height:48px;box-shadow:0 0 0 10px #f4f6f8}
+.hwsec .hwi svg{width:20px;height:20px}
+.hwsec .hw h3{margin:16px 0 8px;font-size:12px}
+.hwsec .hw p{font-size:13px;line-height:1.65;max-width:220px}
+@media (max-width:860px){.hwsec .hwi{width:40px;height:40px;box-shadow:none}.hwsec .hw h3{margin:2px 0 4px}.hwsec .hwl{gap:20px !important}}
 </style>
 </head>
 <body>
@@ -243,8 +255,85 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
   </div>
 </section>
 
+<!-- Live sites -->
+<section aria-label="Live websites" class="lsband" style="background: #1f2a48; padding: 100px 5vw 110px">
+  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 40px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #bfcfd9">LIVE WEBSITES</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #ffffff">See my sites in action.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #c9d4de">Client websites I designed and built, live on the web today.</p></div>
+  <ul class="lsites reveal">
+    <li><a class="lsite" href="https://www.goodlooksautospa.com/" target="_blank" rel="noopener">GoodLooks Auto Spa <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
+    <li><a class="lsite" href="https://www.conventionalbuildersandroofing.com/" target="_blank" rel="noopener">Conventional Builders &amp; Roofing <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
+    <li><a class="lsite" href="https://www.porschespilates.com/" target="_blank" rel="noopener">Porsches &amp; Pilates <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
+  </ul>
+</section>
+
+<!-- Recommendations -->
+<section id="recs" style="background: #ffffff; padding: 100px 5vw 110px">
+  <div style="max-width: 1320px; margin: 0 auto">
+    <p class="reveal" style="margin: 0 0 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.3em; color: #1f2a48">RECOMMENDATIONS</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px">
+      <figure class="rec reveal">
+        <figcaption style="display: flex; align-items: center; gap: 20px">
+          <img src="/assets/5e26e967872cfd80f954d78f6ba18af4.jpg" alt="Ruan M. Marinho" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; flex: none">
+          <span style="display: flex; flex-direction: column; gap: 4px">
+            <strong style="font-size: 17px; color: #1f2a48; font-weight: 700">Ruan M. Marinho</strong>
+            <span style="font-size: 13px; color: #555555">Founder, Develomark</span>
+            <span style="font-size: 12px; color: #8a93a3">August 14, 2026 · managed Annalise directly</span>
+          </span>
+        </figcaption>
+        <blockquote style="margin: 0; font-size: 14px; line-height: 1.75; color: #555555">“I am pleased to recommend Annalise Cook, who completed a 12-week internship in Develomark’s 2026 Summer Cohort. As Founder, I worked with Annalise directly, and she stood out as the strongest design talent in the program — someone who can move from strategy to finished creative and back without losing quality in either direction.”</blockquote>
+        <a class="more" href="https://www.linkedin.com/in/annalisec/" style="border-bottom: 0; padding-bottom: 0; margin-top: auto">Read more <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </figure>
+      <figure class="rec reveal">
+        <figcaption style="display: flex; align-items: center; gap: 20px">
+          <img src="/assets/e92ab4906ced546fbf93f4f872d5c622.jpg" alt="Ava Creto" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; flex: none">
+          <span style="display: flex; flex-direction: column; gap: 4px">
+            <strong style="font-size: 17px; color: #1f2a48; font-weight: 700">Ava Creto</strong>
+            <span style="font-size: 13px; color: #555555">Marketing Coordinator at Develomark</span>
+            <span style="font-size: 12px; color: #8a93a3">August 14, 2026 · Ava was Annalise’s mentor</span>
+          </span>
+        </figcaption>
+        <blockquote style="margin: 0; font-size: 14px; line-height: 1.75; color: #555555">“I had the pleasure of mentoring Annalise during her time as a Digital Marketing Intern at Develomark, and she was an incredible addition to our cohort. From the beginning, Annalise stood out for her strong work ethic, creativity, positive attitude, and genuine passion for learning and growing within digital marketing.”</blockquote>
+        <a class="more" href="https://www.linkedin.com/in/annalisec/" style="border-bottom: 0; padding-bottom: 0; margin-top: auto">Read more <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Brands & clients -->
+<section aria-label="Brands and clients" style="background: #f4f6f8; padding: 96px 0 104px">
+  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 48px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">BRANDS &amp; CLIENTS</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #1f2a48">Brands I’ve worked with.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #5a6478">Through client work, social campaigns and brand photoshoots.</p></div>
+  <div style="overflow: hidden; border-top: 1px solid #dfe5eb; border-bottom: 1px solid #dfe5eb; padding: 34px 0">
+    <div class="track">
+      <div style="display: flex; gap: 80px; padding-right: 80px; align-items: center"><img class="logo" src="/assets/dee0d38f980c2c0b3fe06ef3593fc9fd.png" alt="GoodLooks Auto Spa"><img class="logo" src="/assets/60a5023f16284f8bc1a5254923b82c46.png" alt="Edikted"><img class="logo" src="/assets/729fd4275802950804e5812d17b70f3f.png" alt="Poppi"><img class="logo" src="/assets/3de1adaae21ab3623c1ca0f3a6f0345c.png" alt="Hops on West"><img class="logo" src="/assets/bd8de78a7cbc82e7ae082404af149dbd.png" alt="Bloom"><img class="logo" src="/assets/02ab9eed85fe3c8ee8a0138d6abf38ac.png" alt="Princess Polly"><img class="logo" src="/assets/83f583cf6397ac8576eaea02fca0d3a7.png" alt="Hidden Valley"><img class="logo" src="/assets/22e993115dc12b395824fe02c42977e0.png" alt="Loving Tan"><img class="logo" src="/assets/db025d551ddfbeabbec7923e519d8731.png" alt="CB Roofing"><img class="logo" src="/assets/e673f7a3c41a90577752317e8c366cd1.png" alt="B&amp;M Demolitions"><img class="logo" src="/assets/1a6a8db66baf80ee95c7a66c477dbde1.png" alt="Delta Wealth"><img class="logo" src="/assets/c679d4e52845f7202343981bec118c9b.png" alt="Gift of Adoption Fund"><img class="logo" src="/assets/a49ed8cec51cbd5bcd7980d7ff985bc0.png" alt="Hello Molly"><img class="logo" src="/assets/4475c414904dae08f48fc78b5a155498.png" alt="Alani Nu"><img class="logo" src="/assets/0337df0fb22d63e9e83b9ccdab09030d.png" alt="Prime"><img class="logo" src="/assets/c2025951f05a36de747c0890b269cfbf.png" alt="Brewbury"></div>
+      <div aria-hidden="true" style="display: flex; gap: 80px; padding-right: 80px; align-items: center"><img class="logo" src="/assets/dee0d38f980c2c0b3fe06ef3593fc9fd.png" alt=""><img class="logo" src="/assets/60a5023f16284f8bc1a5254923b82c46.png" alt=""><img class="logo" src="/assets/729fd4275802950804e5812d17b70f3f.png" alt=""><img class="logo" src="/assets/3de1adaae21ab3623c1ca0f3a6f0345c.png" alt=""><img class="logo" src="/assets/bd8de78a7cbc82e7ae082404af149dbd.png" alt=""><img class="logo" src="/assets/02ab9eed85fe3c8ee8a0138d6abf38ac.png" alt=""><img class="logo" src="/assets/83f583cf6397ac8576eaea02fca0d3a7.png" alt=""><img class="logo" src="/assets/22e993115dc12b395824fe02c42977e0.png" alt=""><img class="logo" src="/assets/db025d551ddfbeabbec7923e519d8731.png" alt=""><img class="logo" src="/assets/e673f7a3c41a90577752317e8c366cd1.png" alt=""><img class="logo" src="/assets/1a6a8db66baf80ee95c7a66c477dbde1.png" alt=""><img class="logo" src="/assets/c679d4e52845f7202343981bec118c9b.png" alt=""><img class="logo" src="/assets/a49ed8cec51cbd5bcd7980d7ff985bc0.png" alt=""><img class="logo" src="/assets/4475c414904dae08f48fc78b5a155498.png" alt=""><img class="logo" src="/assets/0337df0fb22d63e9e83b9ccdab09030d.png" alt=""><img class="logo" src="/assets/c2025951f05a36de747c0890b269cfbf.png" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- Tools -->
+<section aria-label="Tools I work with" style="background: #ffffff; padding: 90px 5vw 96px">
+  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 48px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">TOOLS I WORK WITH</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #1f2a48">The toolkit behind the work.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #5a6478">From the Adobe suite and Figma to web builders and AI assistants.</p></div>
+  <ul class="reveal" style="list-style: none; margin: 0 auto; padding: 0; max-width: 1240px; display: grid; grid-template-columns: repeat(auto-fit, 68px); justify-content: center; gap: 28px 14px">
+      <li class="tool"><span class="ti"><img src="/assets/9a6990aa06d35eaa27f825e7967df53f.png" alt=""></span><span class="tl">Illustrator</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/450cf27cf2841100d6d481762ec175b1.png" alt=""></span><span class="tl">Photoshop</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/31205987948662d9e8ac6230ea10dbef.png" alt=""></span><span class="tl">InDesign</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/462d02482665baaeee76d94889dcdfda.png" alt=""></span><span class="tl">After Effects</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/cb70d795a271ec9c0a26c4b1f6907f09.png" alt=""></span><span class="tl">Premiere Pro</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/1ccaa71af6bcad3116c4a540c0ee6214.png" alt=""></span><span class="tl">Figma</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/4fa37bbaf7446631fb9d9d2a086fbbe6.png" alt=""></span><span class="tl">Canva</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/c08a5340f8abf8f743a9a9338db6fa45.png" alt=""></span><span class="tl">Duda</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/74162809ade6a8b3c853ff28d171d0b3.png" alt=""></span><span class="tl">Framer</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/1a7ec4aec3700659df67c13e9195a5fb.png" alt=""></span><span class="tl">WordPress</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/d47920aa5502a3e0d4e190f63a953f45.png" alt=""></span><span class="tl">Shopify</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/c201fc0a7cb41c6d1ae7aa4ae386fb0b.png" alt=""></span><span class="tl">PowerPoint</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/fdecc2dd6bee47fb1e3622828eec8651.png" alt=""></span><span class="tl">Excel</span></li>
+      <li class="tool"><span class="ti"><svg aria-hidden="true" viewBox="0 0 48 48" width="32" height="32"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.9 6.2C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.8c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg></span><span class="tl">Google Workspace</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/24d30d8ea73c7fcd6a3596069bb2c49f.png" alt=""></span><span class="tl">ChatGPT</span></li>
+      <li class="tool"><span class="ti"><img src="/assets/8ad183f22d9d7182f8365dcac4382e3c.png" alt=""></span><span class="tl">Claude</span></li>
+  </ul>
+</section>
+
 <!-- =============== HOW I WORK =============== -->
-<section aria-label="How I work" style="background: #ffffff; padding: 110px 5vw 110px">
+<section aria-label="How I work" class="hwsec" style="background: #f4f6f8; padding: 80px 5vw 84px">
   <div style="max-width: 1240px; margin: 0 auto">
     <div class="reveal" style="text-align: center; max-width: 640px; margin: 0 auto 56px">
       <p style="margin: 0 0 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">HOW I WORK</p>
@@ -276,82 +365,6 @@ section[aria-label="Tools I work with"] ul{grid-template-columns:repeat(auto-fit
   </div>
 </section>
 
-<!-- Tools -->
-<section aria-label="Tools I work with" style="background: #f4f6f8; padding: 100px 5vw 110px">
-  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 48px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">TOOLS I WORK WITH</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #1f2a48">The toolkit behind the work.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #5a6478">From the Adobe suite and Figma to web builders and AI assistants.</p></div>
-  <ul class="reveal" style="list-style: none; margin: 0 auto; padding: 0; max-width: 1240px; display: grid; grid-template-columns: repeat(auto-fit, 68px); justify-content: center; gap: 28px 14px">
-      <li class="tool"><span class="ti"><img src="/assets/9a6990aa06d35eaa27f825e7967df53f.png" alt=""></span><span class="tl">Illustrator</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/450cf27cf2841100d6d481762ec175b1.png" alt=""></span><span class="tl">Photoshop</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/31205987948662d9e8ac6230ea10dbef.png" alt=""></span><span class="tl">InDesign</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/462d02482665baaeee76d94889dcdfda.png" alt=""></span><span class="tl">After Effects</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/cb70d795a271ec9c0a26c4b1f6907f09.png" alt=""></span><span class="tl">Premiere Pro</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/1ccaa71af6bcad3116c4a540c0ee6214.png" alt=""></span><span class="tl">Figma</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/4fa37bbaf7446631fb9d9d2a086fbbe6.png" alt=""></span><span class="tl">Canva</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/c08a5340f8abf8f743a9a9338db6fa45.png" alt=""></span><span class="tl">Duda</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/74162809ade6a8b3c853ff28d171d0b3.png" alt=""></span><span class="tl">Framer</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/1a7ec4aec3700659df67c13e9195a5fb.png" alt=""></span><span class="tl">WordPress</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/d47920aa5502a3e0d4e190f63a953f45.png" alt=""></span><span class="tl">Shopify</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/c201fc0a7cb41c6d1ae7aa4ae386fb0b.png" alt=""></span><span class="tl">PowerPoint</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/fdecc2dd6bee47fb1e3622828eec8651.png" alt=""></span><span class="tl">Excel</span></li>
-      <li class="tool"><span class="ti"><svg aria-hidden="true" viewBox="0 0 48 48" width="32" height="32"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.9 6.2C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.8c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg></span><span class="tl">Google Workspace</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/24d30d8ea73c7fcd6a3596069bb2c49f.png" alt=""></span><span class="tl">ChatGPT</span></li>
-      <li class="tool"><span class="ti"><img src="/assets/8ad183f22d9d7182f8365dcac4382e3c.png" alt=""></span><span class="tl">Claude</span></li>
-  </ul>
-</section>
-
-<!-- Live sites -->
-<section aria-label="Live websites" class="lsband" style="background: #1f2a48; padding: 100px 5vw 110px">
-  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 40px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #bfcfd9">LIVE WEBSITES</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #ffffff">See my sites in action.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #c9d4de">Client websites I designed and built, live on the web today.</p></div>
-  <ul class="lsites reveal">
-    <li><a class="lsite" href="https://www.goodlooksautospa.com/" target="_blank" rel="noopener">GoodLooks Auto Spa <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
-    <li><a class="lsite" href="https://www.conventionalbuildersandroofing.com/" target="_blank" rel="noopener">Conventional Builders &amp; Roofing <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
-    <li><a class="lsite" href="https://www.porschespilates.com/" target="_blank" rel="noopener">Porsches &amp; Pilates <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
-  </ul>
-</section>
-
-<!-- Brands & clients -->
-<section aria-label="Brands and clients" style="background: #ffffff; padding: 100px 0 110px">
-  <div class="reveal" style="text-align: center; max-width: 760px; margin: 0 auto 48px; padding: 0 5vw"><p style="margin: 0 0 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.32em; color: #3b4c78">BRANDS &amp; CLIENTS</p><h2 style="margin: 0; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; color: #1f2a48">Brands I’ve worked with.</h2><p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #5a6478">Through client work, social campaigns and brand photoshoots.</p></div>
-  <div style="overflow: hidden; border-top: 1px solid #dfe5eb; border-bottom: 1px solid #dfe5eb; padding: 34px 0">
-    <div class="track">
-      <div style="display: flex; gap: 80px; padding-right: 80px; align-items: center"><img class="logo" src="/assets/dee0d38f980c2c0b3fe06ef3593fc9fd.png" alt="GoodLooks Auto Spa"><img class="logo" src="/assets/60a5023f16284f8bc1a5254923b82c46.png" alt="Edikted"><img class="logo" src="/assets/729fd4275802950804e5812d17b70f3f.png" alt="Poppi"><img class="logo" src="/assets/3de1adaae21ab3623c1ca0f3a6f0345c.png" alt="Hops on West"><img class="logo" src="/assets/bd8de78a7cbc82e7ae082404af149dbd.png" alt="Bloom"><img class="logo" src="/assets/02ab9eed85fe3c8ee8a0138d6abf38ac.png" alt="Princess Polly"><img class="logo" src="/assets/83f583cf6397ac8576eaea02fca0d3a7.png" alt="Hidden Valley"><img class="logo" src="/assets/22e993115dc12b395824fe02c42977e0.png" alt="Loving Tan"><img class="logo" src="/assets/db025d551ddfbeabbec7923e519d8731.png" alt="CB Roofing"><img class="logo" src="/assets/e673f7a3c41a90577752317e8c366cd1.png" alt="B&amp;M Demolitions"><img class="logo" src="/assets/1a6a8db66baf80ee95c7a66c477dbde1.png" alt="Delta Wealth"><img class="logo" src="/assets/c679d4e52845f7202343981bec118c9b.png" alt="Gift of Adoption Fund"><img class="logo" src="/assets/a49ed8cec51cbd5bcd7980d7ff985bc0.png" alt="Hello Molly"><img class="logo" src="/assets/4475c414904dae08f48fc78b5a155498.png" alt="Alani Nu"><img class="logo" src="/assets/0337df0fb22d63e9e83b9ccdab09030d.png" alt="Prime"><img class="logo" src="/assets/c2025951f05a36de747c0890b269cfbf.png" alt="Brewbury"></div>
-      <div aria-hidden="true" style="display: flex; gap: 80px; padding-right: 80px; align-items: center"><img class="logo" src="/assets/dee0d38f980c2c0b3fe06ef3593fc9fd.png" alt=""><img class="logo" src="/assets/60a5023f16284f8bc1a5254923b82c46.png" alt=""><img class="logo" src="/assets/729fd4275802950804e5812d17b70f3f.png" alt=""><img class="logo" src="/assets/3de1adaae21ab3623c1ca0f3a6f0345c.png" alt=""><img class="logo" src="/assets/bd8de78a7cbc82e7ae082404af149dbd.png" alt=""><img class="logo" src="/assets/02ab9eed85fe3c8ee8a0138d6abf38ac.png" alt=""><img class="logo" src="/assets/83f583cf6397ac8576eaea02fca0d3a7.png" alt=""><img class="logo" src="/assets/22e993115dc12b395824fe02c42977e0.png" alt=""><img class="logo" src="/assets/db025d551ddfbeabbec7923e519d8731.png" alt=""><img class="logo" src="/assets/e673f7a3c41a90577752317e8c366cd1.png" alt=""><img class="logo" src="/assets/1a6a8db66baf80ee95c7a66c477dbde1.png" alt=""><img class="logo" src="/assets/c679d4e52845f7202343981bec118c9b.png" alt=""><img class="logo" src="/assets/a49ed8cec51cbd5bcd7980d7ff985bc0.png" alt=""><img class="logo" src="/assets/4475c414904dae08f48fc78b5a155498.png" alt=""><img class="logo" src="/assets/0337df0fb22d63e9e83b9ccdab09030d.png" alt=""><img class="logo" src="/assets/c2025951f05a36de747c0890b269cfbf.png" alt=""></div>
-    </div>
-  </div>
-</section>
-
-<!-- Recommendations -->
-<section id="recs" style="background: #f4f6f8; padding: 100px 5vw 110px">
-  <div style="max-width: 1320px; margin: 0 auto">
-    <p class="reveal" style="margin: 0 0 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.3em; color: #1f2a48">RECOMMENDATIONS</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px">
-      <figure class="rec reveal">
-        <figcaption style="display: flex; align-items: center; gap: 20px">
-          <img src="/assets/5e26e967872cfd80f954d78f6ba18af4.jpg" alt="Ruan M. Marinho" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; flex: none">
-          <span style="display: flex; flex-direction: column; gap: 4px">
-            <strong style="font-size: 17px; color: #1f2a48; font-weight: 700">Ruan M. Marinho</strong>
-            <span style="font-size: 13px; color: #555555">Founder, Develomark</span>
-            <span style="font-size: 12px; color: #8a93a3">August 14, 2026 · managed Annalise directly</span>
-          </span>
-        </figcaption>
-        <blockquote style="margin: 0; font-size: 14px; line-height: 1.75; color: #555555">“I am pleased to recommend Annalise Cook, who completed a 12-week internship in Develomark’s 2026 Summer Cohort. As Founder, I worked with Annalise directly, and she stood out as the strongest design talent in the program — someone who can move from strategy to finished creative and back without losing quality in either direction.”</blockquote>
-        <a class="more" href="https://www.linkedin.com/in/annalisec/" style="border-bottom: 0; padding-bottom: 0; margin-top: auto">Read more <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-      </figure>
-      <figure class="rec reveal">
-        <figcaption style="display: flex; align-items: center; gap: 20px">
-          <img src="/assets/e92ab4906ced546fbf93f4f872d5c622.jpg" alt="Ava Creto" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; flex: none">
-          <span style="display: flex; flex-direction: column; gap: 4px">
-            <strong style="font-size: 17px; color: #1f2a48; font-weight: 700">Ava Creto</strong>
-            <span style="font-size: 13px; color: #555555">Marketing Coordinator at Develomark</span>
-            <span style="font-size: 12px; color: #8a93a3">August 14, 2026 · Ava was Annalise’s mentor</span>
-          </span>
-        </figcaption>
-        <blockquote style="margin: 0; font-size: 14px; line-height: 1.75; color: #555555">“I had the pleasure of mentoring Annalise during her time as a Digital Marketing Intern at Develomark, and she was an incredible addition to our cohort. From the beginning, Annalise stood out for her strong work ethic, creativity, positive attitude, and genuine passion for learning and growing within digital marketing.”</blockquote>
-        <a class="more" href="https://www.linkedin.com/in/annalisec/" style="border-bottom: 0; padding-bottom: 0; margin-top: auto">Read more <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-      </figure>
-    </div>
-  </div>
-</section>
 <!-- =============== CONTACT =============== -->
 <section id="contact" style="position: relative; background: #1f2a48; color: #ffffff; padding: 56px 5vw 48px; overflow: hidden">
   <div class="mono drift" aria-hidden="true" style="position: absolute; right: -8%; top: -10%; width: 52vw; max-width: 760px; aspect-ratio: 1.3; opacity: 0.16"></div>
