@@ -143,6 +143,15 @@ a:hover{color:#3b4c78}
   #site{padding:44px 24px !important;margin:12px 0 !important}
   #site p:not(.lbl){font-size:14px !important;line-height:1.7 !important}
 }
+
+/* fix-v2 */
+.reveal:has(.lbov),.reveal:has(.lbo){animation:none !important;opacity:1 !important;transform:none !important}
+.triwrap{--pw:min(400px,calc((min(90vw,1100px) - 48px) / 3),calc((100vh - 160px) / 2.316)) !important}
+.fembed{display:block;width:100%;max-width:980px;margin:34px auto 0;aspect-ratio:16 / 10;border:0;border-radius:12px;background:#151c30;box-shadow:0 30px 60px -34px rgba(0,0,0,.6)}
+.fembed.app{max-width:420px;aspect-ratio:9 / 17}
+@media (max-width:760px){.fembed{aspect-ratio:4 / 3.4}.fembed.app{aspect-ratio:9 / 17}}
+.btn-line-w{border:1px solid rgba(255,255,255,.7);color:#ffffff}
+.btn-line-w:hover{background:#ffffff;color:#1f2a48}
 </style>
 </head>
 <body>
@@ -165,21 +174,21 @@ a:hover{color:#3b4c78}
 </nav>
 
 <!-- =============== HERO =============== -->
-<header style="position: relative; background: #ffffff; overflow: hidden; margin-top: -88px; padding-top: 88px">
-  <div class="bg-hero" aria-hidden="true" style="position: absolute; top: 0; bottom: 0; right: 0; aspect-ratio: 1494 / 2000; opacity: 0.5"></div>
-  <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 30%)"></div>
+<header style="position: relative; background: #1f2a48; color: #ffffff; overflow: hidden">
+  <div class="bg-hero" aria-hidden="true" style="position: absolute; top: 0; bottom: 0; right: 0; aspect-ratio: 1494 / 2000; opacity: 0.6; filter: grayscale(1); -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0.75) 50%, #000 72%); mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0.75) 50%, #000 72%)"></div>
+  <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(31,42,72,0.96) 0%, rgba(31,42,72,0.82) 38%, rgba(31,42,72,0.45) 70%, rgba(31,42,72,0.6) 100%)"></div>
 
 
-  <div style="position: relative; padding: 7vh 5vw 8vh; max-width: 1320px">
-    <p class="fade" style="margin: 0 0 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.3em; color: #8a9bb0"><a href="/" style="color: #8a9bb0">HOME</a> <span aria-hidden="true">/</span> <span style="color: #3b4c78">ABOUT</span></p>
-    <h1 style="margin: 0; font-size: clamp(40px, 5.6vw, 88px); line-height: 0.98; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; color: #1f2a48">
+  <div style="position: relative; padding: 11vh 5vw 12vh; max-width: 1320px">
+    <p class="fade" style="margin: 0 0 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.3em; color: #bfcfd9"><a href="/" style="color: #bfcfd9">HOME</a> <span aria-hidden="true">/</span> <span style="color: #ffffff">ABOUT</span></p>
+    <h1 style="margin: 0; font-size: clamp(40px, 5.6vw, 88px); line-height: 0.98; font-weight: 700; letter-spacing: -0.01em; text-transform: uppercase; color: #ffffff">
       <span class="mask"><span>Hello! I’m</span></span>
       <span class="mask"><span style="animation-delay: .12s">Annalise</span></span>
     </h1>
-    <p class="fade fade2" style="margin: 32px 0 0; max-width: 560px; font-size: 17px; line-height: 1.75; color: #444444">A graphic designer and digital marketing professional passionate about building brands, creating engaging visual experiences, and bringing ideas to life through thoughtful design.</p>
+    <p class="fade fade2" style="margin: 32px 0 0; max-width: 560px; font-size: 17px; line-height: 1.75; color: #dfe7ee">A graphic designer and digital marketing professional passionate about building brands, creating engaging visual experiences, and bringing ideas to life through thoughtful design.</p>
     <div class="fade fade3" style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px">
-      <a class="btn btn-navy" href="/#work">Explore my work <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-      <a class="btn btn-line" href="#contact">Get in touch</a>
+      <a class="btn btn-light" href="/#work">Explore my work <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="btn btn-line-w" href="#contact">Get in touch</a>
     </div>
   </div>
 </header>
@@ -258,6 +267,7 @@ a:hover{color:#3b4c78}
       <li class="tool"><span class="ti"><img src="/assets/d47920aa5502a3e0d4e190f63a953f45.png" alt=""></span><span class="tl">Shopify</span></li>
       <li class="tool"><span class="ti"><img src="/assets/c201fc0a7cb41c6d1ae7aa4ae386fb0b.png" alt=""></span><span class="tl">PowerPoint</span></li>
       <li class="tool"><span class="ti"><img src="/assets/fdecc2dd6bee47fb1e3622828eec8651.png" alt=""></span><span class="tl">Excel</span></li>
+      <li class="tool"><span class="ti"><svg aria-hidden="true" viewBox="0 0 48 48" width="32" height="32"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.9 6.2C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.8c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg></span><span class="tl">Google Workspace</span></li>
       <li class="tool"><span class="ti"><img src="/assets/24d30d8ea73c7fcd6a3596069bb2c49f.png" alt=""></span><span class="tl">ChatGPT</span></li>
       <li class="tool"><span class="ti"><img src="/assets/8ad183f22d9d7182f8365dcac4382e3c.png" alt=""></span><span class="tl">Claude</span></li>
   </ul>

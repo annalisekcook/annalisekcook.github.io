@@ -120,6 +120,15 @@ a:hover{color:#3b4c78}
   #site{padding:44px 24px !important;margin:12px 0 !important}
   #site p:not(.lbl){font-size:14px !important;line-height:1.7 !important}
 }
+
+/* fix-v2 */
+.reveal:has(.lbov),.reveal:has(.lbo){animation:none !important;opacity:1 !important;transform:none !important}
+.triwrap{--pw:min(400px,calc((min(90vw,1100px) - 48px) / 3),calc((100vh - 160px) / 2.316)) !important}
+.fembed{display:block;width:100%;max-width:980px;margin:34px auto 0;aspect-ratio:16 / 10;border:0;border-radius:12px;background:#151c30;box-shadow:0 30px 60px -34px rgba(0,0,0,.6)}
+.fembed.app{max-width:420px;aspect-ratio:9 / 17}
+@media (max-width:760px){.fembed{aspect-ratio:4 / 3.4}.fembed.app{aspect-ratio:9 / 17}}
+.btn-line-w{border:1px solid rgba(255,255,255,.7);color:#ffffff}
+.btn-line-w:hover{background:#ffffff;color:#1f2a48}
 </style>
 </head>
 <body>
@@ -191,7 +200,8 @@ a:hover{color:#3b4c78}
     <div id="site" class="reveal" style="margin: 36px 0; border-radius: 16px; background: #1f2a48; color: #ffffff; padding: 64px 48px; text-align: center">
       <p class="lbl" style="color: #bfcfd9; margin-bottom: 14px">Interactive website</p>
       <p style="margin: 0 auto; max-width: 640px; font-size: 15px; line-height: 1.8; color: #dfe7ee">An e-commerce site for browsing collections and designing custom cards, built around the tagline “Where words become gifts.” Scroll and click through the Figma prototype to explore the experience. Some features are simplified for demonstration.</p>
-      <a class="btn btn-light" href="https://www.figma.com/proto/XGy0XyfxHAH4uEY34i83Pj/Paper-Treauses?node-id=2-6&amp;starting-point-node-id=2%3A6" style="margin-top: 30px; min-height: 44px; padding: 0 24px; font-size: 11px">Open prototype in Figma <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+      <iframe class="fembed" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXGy0XyfxHAH4uEY34i83Pj%2FPaper-Treauses%3Fnode-id%3D2-6%26starting-point-node-id%3D2%253A6%26scaling%3Dscale-down%26content-scaling%3Dfixed%26hide-ui%3D1" title="Interactive Figma prototype" loading="lazy" allowfullscreen></iframe>
+      <a class="btn btn-light" href="https://www.figma.com/proto/XGy0XyfxHAH4uEY34i83Pj/Paper-Treauses?node-id=2-6&amp;starting-point-node-id=2%3A6" style="margin-top: 30px; min-height: 44px; padding: 0 24px; font-size: 11px">Open full screen in Figma <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
     </div>
     <div class="ph reveal" style="aspect-ratio: 1.5"><img src="/assets/03a57236d9fa178cde699da251438e65.jpg" alt="Paper Treasures brand identity"></div>
     <div class="pair reveal">
