@@ -203,6 +203,12 @@ a:hover{color:#3b4c78}
 .iggrid{display:grid;grid-template-columns:repeat(2,minmax(0,400px));justify-content:center;gap:28px}
 .iggrid iframe{display:block;width:100%;height:640px;border:1px solid #dfe5eb;border-radius:14px;background:#ffffff;box-shadow:0 34px 60px -36px rgba(31,42,72,.45)}
 @media (max-width:760px){.iggrid{grid-template-columns:minmax(0,400px)}.iggrid iframe{height:600px}}
+
+/* fix-v27 */
+.iggrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1100px;margin:0 auto}
+.iggrid iframe{height:470px;border-radius:12px}
+@media (max-width:1100px){.iggrid{grid-template-columns:repeat(2,minmax(0,320px))}.iggrid iframe{height:540px}}
+@media (max-width:760px){.iggrid{grid-template-columns:minmax(0,400px)}.iggrid iframe{height:600px}}
 </style>
 </head>
 <body>
